@@ -1,0 +1,10 @@
+sed '/[Zz][Oo][Oo]/d' ~/Downloads/pandas.tsv > ~/Downloads/pandas_zoos.txt
+touch ~/Downloads/sorted_pandas.txt ; sort -k2 ~/Downloads/pandas.tsv | awk '{print $1,$4,$2}' | sed '32d' > ~/Downloads/sorted_pandas.txt 
+touch ~/Downloads/panda_zoos_A2Z.txt ; sed '/location/d' ~/Downloads/pandas.tsv | grep -i 'zoo\|reserve' | awk '{print $5}' | sort > ~/Downloads/panda_zoos_A2Z.txt
+sed 's/female/F/' ~/Downloads/pandas.tsv | sed 's/male/M/' > ~/Downloads/panda_m_f.txt
+grep "female" ~/Downloads/pandas.tsv | grep -c "October"
+grep -n [a-z] ~/Downloads/pandas.tsv > ~/Downloads/panda_names.txt
+sed -n '1p; 6p; 17p' ~/Downloads/pandas.tsv > ~/Downloads/lines_1_6_17.txt
+grep -i x ~/Downloads/pandas.tsv > ~/Downloads/x_lines.txt
+awk '{print $5}' ~/Downloads/pandas.tsv | sed '/location/d' | sort | uniq -u > ~/Downloads/unique_places.txt
+sort -k4 -n ~/Downloads/pandas.tsv | awk '$4 <= 10 {print $1, $4}' > ~/Downloads/young_pandas.txt
