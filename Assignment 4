@@ -1,0 +1,10 @@
+makeblastdb -in /home/mario/Downloads/mystery_transcripts.fasta -dbtype nucl -out ~/Downloads/dbs/nucl
+makeblastdb -in /home/mario/Downloads/mystery_proteins.fasta -dbtype prot -out ~/Downloads/dbs/prot
+blastn -db ~/Downloads/dbs/nucl -query ~/Downloads/mystery_nucleotide_query.fasta -outfmt 7 -out ~/Downloads/nucl_results.out ; sed '/#/d' ~/Downloads/nucl_results.out | sort -k11 -n | awk '$11 <= 0.001 {print}' | head -n 5 > ~/Downloads/nucl_results.txt ; head -n 5 ~/Downloads/nucl_results.out >> ~/Downloads/nucl_results.txt
+T010027234997 (91.965% identity).
+blastn -db ~/Downloads/dbs/nucl -query ~/Downloads/mystery_nucleotide_query.fasta -outfmt 7 -out ~/Downloads/nucl_results.out ; sed '/#/d' ~/Downloads/nucl_results.out | sort -k3 -nr | awk '$3 > 90 {print $2}' > ~/Downloads/most_similar.txt 
+blastp -db ~/Downloads/dbs/prot -query ~/Downloads/mystery_protein_query.fasta -outfmt 7 -out ~/Downloads/prot_results.out ; sed '/#/d' ~/Downloads/prot_results.out | sort -k11 -n | awk '$11 <= 0.00001 {print}' | head -n 15 > ~/Downloads/prot_results.txt ; head -n 5 ~/Downloads/prot_results.out >> ~/Downloads/prot_results.txt
+P010027073865, P010027077695, P010027090796 & P010027090798 (e-value = 0.0).
+Coffea arabica 
+Gardenia jasminoides
+Gardenia jasminoides putative catalase mRNA
