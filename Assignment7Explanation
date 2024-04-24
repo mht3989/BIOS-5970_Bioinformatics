@@ -1,0 +1,11 @@
+Peak 774 (from about 43,590,700 to 43,591,000 bp) is only present in larvae. 
+
+Genes: 
+-	LOC119410599: Enhanced expression in larvae stage of development. Region between about 43,611,250 and 43,626,600 bp. Around 24 kb away from peak 774.
+-	fibrinogen alpha chain-like (LOC119410610): Enhanced expression in larvae stage of development. Region between 43,626,750 to about 43,627,900 bp. Around 35 kb away from peak 774. The protein coded by this gene favors blood clotting, a function that may not be as necessary during a period of inactivity like diapause.
+-	toll-like receptor 2 (tlr2): Silenced expression in larvae stage of development. Region between about 43,659,100 and 43,669,500 bp. 68 kb from peak 774. This gene’s protein plays a role in innate immunity. Slowed down metabolism may make the fish more susceptible to diseases during diapause, hence the promotion of this gene’s expression during this phase.
+-	fibrinogen beta chain (fgb): Slightly silenced expression in diapause stage of development. Region between 43,671,250 to 43,675,300 bp.  80 kb from peak 774. This gene also takes part in blood coagulation.
+
+Peak 517 (diapause) and Peak 776 (larvae) (from about 43,747,700 to 43,748,200 and 43,748,500, respectively) are somewhat similar peaks in both ncOCR bed files. After them, the differences in the extent of gene expression between both developmental phases are less noticeable for some tens of kb.
+File metadata and controls
+93.6 KB
